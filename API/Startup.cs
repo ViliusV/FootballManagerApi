@@ -1,4 +1,5 @@
 using Data;
+using Domain;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -30,6 +31,10 @@ namespace API
 			services.AddSingleton<ITeamRepository, FakeTeamRepository>();
 			services.AddSingleton<IPlayerRepository, FakePlayerRepository>();
 			services.AddSingleton<IGameRepository, FakeGameRepository>();
+
+			services.AddTransient<IGameService, GameService>();
+			services.AddTransient<IPlayerService, PlayerService>();
+
 
 
 			services.AddControllers();

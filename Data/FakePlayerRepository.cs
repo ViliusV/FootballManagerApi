@@ -16,7 +16,7 @@ namespace Data
 
 		public Player Add(Player player)
 		{
-			player.Id = _players.Max(p => p.Id) + 1;
+			player.Id = _players.Select(p => p.Id).DefaultIfEmpty().Max() + 1;
 			_players.Add(player);
 
 			return player;

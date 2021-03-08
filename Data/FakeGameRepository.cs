@@ -16,8 +16,7 @@ namespace Data
 
 		public Game Add(Game game)
 		{
-			var newId = _games.Max(g => g.Id) + 1;
-			game.Id = newId;
+			game.Id = _games.Select(g => g.Id).DefaultIfEmpty().Max() + 1; ;
 			_games.Add(game);
 
 			return game;
