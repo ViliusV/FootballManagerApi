@@ -27,6 +27,11 @@ namespace Data
 			return _players.SingleOrDefault(p => p.Id == id);
 		}
 
+		public IEnumerable<Player> GetAll()
+		{
+			return _players;
+		}
+
 		public bool Remove(int id)
 		{
 			var player = Get(id);
