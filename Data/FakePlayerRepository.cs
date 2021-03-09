@@ -75,6 +75,9 @@ namespace Data
 			Add(new Player("Kyle", "Walker", 2, 12));
 			Add(new Player("Raheem", "Sterling", 7, 12));
 			Add(new Player("Kevin", "De Bruyne", 17, 12));
+
+			// Liverpool Players
+			Add(new Player("Roberto", "Firmino", 9, 11));
 		}
 	}
 }

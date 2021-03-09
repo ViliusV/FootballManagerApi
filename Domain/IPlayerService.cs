@@ -1,16 +1,18 @@
 ﻿using Entities;
 using System.Collections.Generic;
-using System.Text;
 
 namespace Domain
 {
 
 	public interface IPlayerService
 	{
+		IEnumerable<Player> GetAll();
+		Player Get(int id);
 		IEnumerable<Player> GetTeamPlayers(int teamId);
-		Player SavePlayer(Player player);
+		Player CreatePlayer(Player player);
+		Player UpdatePlayer(Player player);
 		bool DeletePlayer(int playerId);
 		Player AddPlayerToTheTeam(int teamId, int playerId, int jerseyNumber);
-		bool RemovePlayerFromTheTeam(int playerId);
+		bool RemovePlayerFromTheTeam(int teamId, int playerId);
 	}
 }
