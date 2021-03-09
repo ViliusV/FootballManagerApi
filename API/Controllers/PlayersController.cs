@@ -11,7 +11,7 @@ namespace API.Controllers
 {
 	[Route("api/[controller]")]
 	[ApiController]
-	[Authorize] // ToDo: Allow super admins to call this method
+	[Authorize] // ToDo: Allow super admins to call this controller's actions
 	public class PlayersController : ControllerBase
 	{
 		private readonly IPlayerService _playerService;
